@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var greeting = require('../public/mf-module');
+var greeting = require('../mf-module');
 var moment = require('moment');
 
 /* GET home page. */
