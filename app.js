@@ -36,9 +36,9 @@ var mongoose = require("mongoose");
 mongoose.set('useCreateIndex', true);
 
 var mongoDBLocal = "mongodb://localhost:27017/assigns";
-var mongoDBUrl = "mongodb+srv://mfibrahim:Mariam03@cluster0.7neuk.mongodb.net/assigns"
+var mongoDBUrl = "mongodb+srv://mfibrahim:Mariam03@cluster0.7neuk.mongodb.net/assigns?retryWrites=true&w=majority"
 
-mongoose.connect(mongoDBUrl || mongoDBLocal, {
+mongoose.connect(mongoDBUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
