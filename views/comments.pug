@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    .container
+        h2 All comments
+            each prod in Contacts    
+                .row
+                    .card.col-12.border-danger
+                        h4.card-text
+                            | Name: #{prod.firstname} #{prod.lastname}
+                        h5.card-text
+                            | email: #{prod.mail}
+                        h5.card-body
+                            | Comments: #{prod.comment}
+            a.btn.btn-primary.col-12(href='/') Home Page

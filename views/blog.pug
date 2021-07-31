@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h2 All posts
+
+  form(method="GET" action="/post/create")
+    button.btn.btn-success(type="submit") Create
+
+  if blogPosts
+    each post in blogPosts
+      a(href="/post/" + post.posturl) #{post.posttitle}
+      p= post.postbody
+
